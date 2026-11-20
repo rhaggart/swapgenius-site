@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swap Genius | Software for bike and ski swaps</title>
+<meta name="description" content="Swap Genius is software for clubs, teams and shops that run bike and ski gear swaps: seller sign-up, tags, check-in, point of sale, pickup and payouts.">
+<style>
+  :root {
+    --ink: #17212b;
+    --muted: #55626f;
+    --line: #dfe5ea;
+    --bg: #f6f8f9;
+    --card: #ffffff;
+    --accent: #0f6b4f;
+    --accent-ink: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    font-size: 17px;
+  }
+  a { color: var(--accent); }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+  header.site {
+    background: var(--card);
+    border-bottom: 1px solid var(--line);
+  }
+  header.site .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 18px; padding-bottom: 18px; flex-wrap: wrap; gap: 12px;
+  }
+  .brand { font-weight: 700; font-size: 20px; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; }
+  nav a { margin-left: 20px; text-decoration: none; color: var(--muted); font-size: 15px; }
+  nav a:first-child { margin-left: 0; }
+  nav a:hover { color: var(--ink); }
+  .hero { padding: 72px 0 56px; }
+  .hero h1 { font-size: clamp(32px, 5vw, 46px); line-height: 1.15; margin: 0 0 18px; letter-spacing: -0.02em; max-width: 720px; }
+  .hero p { font-size: 20px; color: var(--muted); max-width: 660px; margin: 0 0 28px; }
+  .button {
+    display: inline-block; background: var(--accent); color: var(--accent-ink);
+    padding: 13px 22px; border-radius: 8px; text-decoration: none; font-weight: 600;
+  }
+  section { padding: 44px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 26px; margin: 0 0 18px; letter-spacing: -0.01em; }
+  h3 { font-size: 18px; margin: 0 0 6px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
+  .card p { margin: 0; color: var(--muted); font-size: 16px; }
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+  .steps li { counter-increment: step; position: relative; padding: 0 0 18px 48px; }
+  .steps li::before {
+    content: counter(step); position: absolute; left: 0; top: 0;
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--accent); color: var(--accent-ink);
+    font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center;
+  }
+  .steps strong { display: block; }
+  .steps span { color: var(--muted); }
+  .plain p, .plain li { color: var(--muted); max-width: 720px; }
+  .plain h3 { margin-top: 26px; }
+  footer { border-top: 1px solid var(--line); padding: 30px 0 48px; color: var(--muted); font-size: 15px; }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top">Swap Genius</a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+      <a href="#policies">Policies</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="wrap hero">
+    <h1>Software for running bike and ski gear swaps</h1>
+    <p>Swap Genius helps clubs, teams and shops run a consignment gear swap from start to finish: seller sign-up, barcode tags, check-in, sales at the register, pickup and seller payouts.</p>
+    <a class="button" href="mailto:rob@swapgenius.com">Contact us</a>
+  </div>
+
+  <section id="what">
+    <div class="wrap">
+      <h2>What Swap Genius does</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Your own swap site</h3>
+          <p>Each organizer gets a site at yourname.swapgenius.com with your logo, swap details and seller sign-in.</p>
+        </div>
+        <div class="card">
+          <h3>Seller accounts and tags</h3>
+          <p>Sellers list their gear online and print barcode tags at home or at the swap. One account works at any swap that uses Swap Genius.</p>
+        </div>
+        <div class="card">
+          <h3>Fast check-in</h3>
+          <p>Staff scan each tag to check gear in and print an inventory list for the seller to sign.</p>
+        </div>
+        <div class="card">
+          <h3>Point of sale</h3>
+          <p>Scan tags at the register and take cash or card. Sales tax and your commission are calculated for you.</p>
+        </div>
+        <div class="card">
+          <h3>Pickup and payouts</h3>
+          <p>Print a pickup list for each seller showing what sold, what is going home and what they are owed, then print payout checks.</p>
+        </div>
+        <div class="card">
+          <h3>Reports</h3>
+          <p>See items and dollar totals, sales, commission and sales tax collected for each swap.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><strong>Set up your swap</strong><span>Choose your dates, sales tax rate and commission, and connect your own Stripe account for card payments.</span></li>
+        <li><strong>Sellers sign up</strong><span>Sellers create an account, enter their gear and prices, and get a barcode to show at check-in.</span></li>
+        <li><strong>Check in gear</strong><span>On drop-off day, staff scan each tagged item into the swap.</span></li>
+        <li><strong>Sell</strong><span>On swap day, staff scan items at the register and take payment by cash or card.</span></li>
+        <li><strong>Pickup and pay sellers</strong><span>Sellers collect unsold gear, and you pay each seller their share after the swap closes.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap plain">
+      <h2>Pricing</h2>
+      <p>Swap Genius is priced as a flat fee per swap, paid by the organizer. There is no charge to sellers or buyers for using the software.</p>
+      <p><a href="mailto:rob@swapgenius.com">Contact us for pricing</a> and availability for your swap.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap plain">
+      <h2>Contact</h2>
+      <p>Questions, pricing, or support: <a href="mailto:rob@swapgenius.com">rob@swapgenius.com</a></p>
+      <p>Swap Genius is operated by Gravel Couch LLC.</p>
+    </div>
+  </section>
+
+  <section id="policies">
+    <div class="wrap plain">
+      <h2>Policies</h2>
+
+      <h3>Payments</h3>
+      <p>Card payments made at a swap are processed by Stripe through the swap organizer's own Stripe account. Swap Genius does not store card numbers. Organizers pay Swap Genius fees by card through Stripe.</p>
+
+      <h3>Refunds and cancellations</h3>
+      <p>Organizers: if you cancel before seller sign-up opens for your swap, we refund the swap fee in full. After seller sign-up has opened, the fee is not refundable. To cancel, email <a href="mailto:rob@swapgenius.com">rob@swapgenius.com</a>.</p>
+      <p>Buyers and sellers: items bought at a swap are sold by the swap organizer, not by Swap Genius. Returns, refunds and seller payouts for those sales are handled by the organizer under the organizer's own policies.</p>
+
+      <h3>Terms of service</h3>
+      <p>Swap Genius provides software that organizers use to run their swaps. Organizers are responsible for their events, the gear sold at them, collecting and remitting sales tax, and paying their sellers. Sellers are responsible for the accuracy of their listings and for the gear they consign. We may suspend an account that is used unlawfully or that puts other users at risk. The service is provided as is, and our liability is limited to the fees paid to us for the swap in question.</p>
+
+      <h3>Privacy</h3>
+      <p>We collect the information needed to run a swap: organizer account details, and seller names, addresses, phone numbers, email addresses and item listings. A seller's contact details are shared only with the organizers of swaps that seller registers for. We do not sell personal information. We use service providers to host the software, send email and process payments. To see, correct or delete your information, email <a href="mailto:rob@swapgenius.com">rob@swapgenius.com</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    &copy; 2026 Gravel Couch LLC. Swap Genius is a service of Gravel Couch LLC. &nbsp;|&nbsp; <a href="mailto:rob@swapgenius.com">rob@swapgenius.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
